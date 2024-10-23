@@ -36,15 +36,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, GalleryActivity::class.java))
         }
         findViewById<View>(R.id.button_camera).setOnClickListener {
-            if (!hasCameraPermission() || !hasStoragePermission()) {
-                ActivityCompat.requestPermissions(
-                    this,
-                    arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                    REQUEST_CAMERA
-                )
-            } else {
-                startActivity(Intent(this, CameraActivity::class.java))
-            }
+//            if (!hasCameraPermission() || !hasStoragePermission()) {
+//                ActivityCompat.requestPermissions(
+//                    this,
+//                    arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+//                    REQUEST_CAMERA
+//                )
+//            } else {
+//                startActivity(Intent(this, CameraActivity::class.java))
+//            }
+
+            startActivity(Intent(this, CameraActivity::class.java))
         }
     }
 
